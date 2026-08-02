@@ -65,7 +65,7 @@ with r1c1:
         fdf, x="Avg_Daily_Usage_Hours", y="Mental_Health_Score",
         color="Stress_Level", category_orders={"Stress_Level": config.STRESS_LEVELS},
         color_discrete_sequence=[config.COLOR_SAGE, config.COLOR_TEAL, config.COLOR_AMBER, config.COLOR_CORAL],
-        opacity=0.65, trendline="ols",
+        opacity=0.65,
         labels={"Avg_Daily_Usage_Hours": "Avg. daily usage (hrs)", "Mental_Health_Score": "Mental health score"},
     )
     fig.update_layout(
