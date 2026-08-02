@@ -35,7 +35,7 @@ def inject_css() -> None:
         li,
         td,
         th {{
-            color: #16353B !important;
+            color: #FFFFFF !important;
         }}
 
         h1,
@@ -44,14 +44,14 @@ def inject_css() -> None:
         h4,
         h5,
         h6 {{
-            color: #16353B !important;
+            color: #FFFFFF !important;
         }}
 
         .stMarkdown,
         .stMarkdown p,
         .stMarkdown span,
         .stMarkdown div {{
-            color: #16353B !important;
+            color: #FFFFFF !important;
         }}
 
         [data-testid="stMarkdownContainer"] {{
