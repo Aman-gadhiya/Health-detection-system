@@ -12,32 +12,126 @@ def inject_css() -> None:
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
-        html, body, [class*="css"] {{
+        /* ==========================================================================
+        GLOBAL APP
+        ========================================================================== */
+
+        html,
+        body,
+        .stApp {{
+
+            background: {config.COLOR_BG} !important;
+            color: {config.COLOR_INK} !important;
             font-family: {config.FONT_BODY};
-            color: {config.COLOR_INK};
+
+        }}
+
+        /* ---------- Force Main Text Black ---------- */
+
+        p,
+        span,
+        div,
+        label,
+        li,
+        td,
+        th {{
+            color: #16353B !important;
+        }}
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {{
+            color: #16353B !important;
+        }}
+
+        .stMarkdown,
+        .stMarkdown p,
+        .stMarkdown span,
+        .stMarkdown div {{
+            color: #16353B !important;
+        }}
+
+        [data-testid="stMarkdownContainer"] {{
+            color: #16353B !important;
+        }}
+
+        [data-testid="stVerticalBlock"] {{
+            color: #16353B !important;
+        }}
+
+        body * {{
+
+            color: inherit;
+
         }}
 
         .stApp {{
             background: {config.COLOR_BG};
         }}
 
-        h1, h2, h3 {{
-            font-family: {config.FONT_DISPLAY};
-            font-weight: 600;
-            color: {config.COLOR_INK};
-            letter-spacing: -0.01em;
+        h1,h2,h3,h4,h5,h6{{
+
+            font-family:{config.FONT_DISPLAY};
+
+            font-weight:600;
+
+            color:{config.COLOR_INK} !important;
+
+            letter-spacing:-0.01em;
+
         }}
 
         /* ---- Sidebar ---- */
-        section[data-testid="stSidebar"] {{
-            background: {config.COLOR_INK};
-        }}
-        section[data-testid="stSidebar"] * {{
-            color: #EAF3F0 !important;
-        }}
-        section[data-testid="stSidebar"] .stMarkdown p {{
-            color: #9FC3BA !important;
-        }}
+        /* ==========================================================================
+            SIDEBAR
+            ========================================================================== */
+
+            section[data-testid="stSidebar"]{{
+
+                background:{config.COLOR_INK} !important;
+
+            }}
+
+            section[data-testid="stSidebar"] *{{
+
+                color:white !important;
+
+            }}
+
+            section[data-testid="stSidebar"] label{{
+
+                color:white !important;
+
+            }}
+
+            section[data-testid="stSidebar"] p{{
+
+                color:#EAF3F0 !important;
+
+            }}
+
+            section[data-testid="stSidebar"] span{{
+
+                color:white !important;
+
+            }}
+
+            section[data-testid="stSidebar"] div{{
+
+                color:white !important;
+
+            }}
+
+            section[data-testid="stSidebar"] h1,
+            section[data-testid="stSidebar"] h2,
+            section[data-testid="stSidebar"] h3{{
+
+                color:white !important;
+
+            }}
 
         /* ---- Signature masthead rule ---- */
         .mp-masthead {{
@@ -120,9 +214,24 @@ def inject_css() -> None:
         }}
 
         /* ---- Buttons ---- */
+
+        /* ---------- Selectbox ---------- */
+
+        div[data-baseweb="select"] * {{
+            color: #16353B !important;
+        }}
+
+        div[data-baseweb="select"] svg {{
+            color: #16353B !important;
+        }}
+
+        .stSlider label {{
+            color: #16353B !important;
+        }}
+
         .stButton > button, .stFormSubmitButton > button {{
             background: {config.COLOR_TEAL};
-            color: white;
+            color: black;
             border-radius: 10px;
             border: none;
             padding: 0.55rem 1.4rem;
